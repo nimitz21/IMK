@@ -1,3 +1,7 @@
+html, body {
+  height: 100%;
+}
+
 .logo {
 	max-width: 125px;
 }
@@ -21,4 +25,24 @@
 
 .nav-link {
 	color: black;
+}
+
+.bottom-right {
+	position: fixed;
+	bottom: 25px;
+	left: 25px;
+}
+
+.right-border {
+	border-right: solid;
+}
+
+.full-container {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+}
+
+.last-child {
+  flex: 1;
 }
