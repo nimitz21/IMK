@@ -3,8 +3,9 @@
 <head>
 	<title>DEAR - Poliklinik</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-	<link rel="stylesheet" href="css\nav.css"
+	<link rel="stylesheet" href="css\nav.css">
 </head>
+
 <body>
 	<div class='container-fluid'>
 		<div class='row vertical-align'>
@@ -27,13 +28,12 @@
 	<div class="container-fluid">
 		<div class="row">
 		  <div class="col-md-3">
-		    <ul class="nav nav-pills nav-stacked">
-					<li>jedan</li>
-		    	<li>dva</li>
-  		 	 	<li>tri</li>
-					<li>cetriri</li>
-					<li>pet</li>
-				</ul>
+		    <nav class="nav flex-column">
+				  <a class="nav-link" href="#">Active</a>
+				  <a class="nav-link" href="#">Link</a>
+				  <a class="nav-link" href="#">Link</a>
+				  <a class="nav-link" href="#">Disabled</a>
+				</nav>
 	    </div>
 	  	<div class="col-md-9">
 		    Main content goes here

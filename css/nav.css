@@ -13,3 +13,12 @@
   display: flex;
   align-items: center;
 }
+
+.red {
+	font-weight: bold;
+	color: red;
+}
+
+.nav-link {
+	color: black;
+}
