@@ -11,7 +11,7 @@
 
 .vertical-align {
   display: flex;
-  align-items: center;
+  align-items:center;
 }
 
 .red {
