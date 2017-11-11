@@ -28,11 +28,6 @@
 	</div>
 	<br>
 
-	<button type="button" class="btn btn-primary bmd-btn-fab">
-			<i class="material-icons">grade</i>
-		</button>
-
-
 	<div class="container">
 		<nav class="nav flex-column">
 			<ul class="nav nav-tabs">
