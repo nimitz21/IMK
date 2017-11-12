@@ -1,0 +1,66 @@
+/* CSS Document */
+form, p, span {
+    margin:0;
+    padding:0; }
+  
+input { font:12px arial; }
+  
+a {
+    color:#0000FF;
+    text-decoration:none; }
+  
+    a:hover { text-decoration:underline; }
+  
+#wrapper {
+    margin:0 auto;
+    padding-bottom:25px;
+    background:#EBF4FB;
+    width: 100%;
+    height: 100%;
+    border:1px solid #ACD8F0; }
+  
+#chatbox {
+    text-align:left;
+    margin:0 auto;
+    margin-bottom: 5px;
+    padding:10px;
+    background:#fff;
+    height: 87.5%;
+    width: 95%;
+    border:1px solid #ACD8F0;
+    overflow:auto; }
+  
+#usermsg {
+    width: 85%;
+    height: 30px;
+    border: 1px solid #ACD8F0; 
+    font-size: 20px;
+    padding: 10px;
+    margin-left: 2.5%;
+}
+  
+#submit { 
+    width: 10%; 
+    height: 30px;
+    font-size: 24px;
+}
+  
+#menu { padding:12.5px 25px 12.5px 25px; }
+  
+.logout { float:right; }
+
+#exit {
+    color: red;
+}
+
+.chat {
+    margin-bottom: 5px;
+}
+
+.my-chat {
+    color: green;
+}
+
+.bot-chat {
+    color: blue;
+}
