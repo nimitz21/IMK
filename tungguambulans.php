@@ -25,6 +25,9 @@ async defer></script>
 
 <div class="row" style="width:100%; height:100%;">
     <div class="col-lg-8" style="width:100%; height:100%;">
+        <form>
+            <input id="pac-input" class="controls" type="hidden" placeholder="Enter your location..">
+        </form>
         <div id="map"></div>
     </div>
     <div class="col-lg-4" style="width:100%; height:100%;">
@@ -70,6 +73,7 @@ async defer></script>
 </div>
 
 <form id="batalForm" method="POST" action="daruratbatal.php" onsubmit="">
+    <input name="location" type="hidden" id="location" value="<?php echo $_SESSION['location']?>" />
     <div class="row">
         <div class="col-lg-12">
             <div class="btn-group d-flex" role="group"> 
