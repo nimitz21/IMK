@@ -70,11 +70,8 @@ function initAutocomplete() {
           map.fitBounds(bounds);
         });
 
-        input = document.getElementById('location').value;
-        google.maps.event.trigger( input, 'keydown', {keyCode:40});
-        google.maps.event.trigger( input, 'keydown', {keyCode:13});
-        google.maps.event.trigger( input, 'focus');
-        google.maps.event.trigger( input, 'keydown', {keyCode:13});
+        input = document.getElementById('pac-input').value;
+        google.maps.event.trigger( searchBox, 'places_changed');
 }
 /*
 function codeAddress(loc) {
