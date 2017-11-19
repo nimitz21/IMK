@@ -1,5 +1,4 @@
 <?php
-    include 'nav.html'
     include 'obat.php'
 ?>
 
