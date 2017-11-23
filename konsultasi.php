@@ -6,7 +6,8 @@
 
 <div id="wrapper">
     <div id="menu">
-        <p class="logout"><a id="exit" href="selesaiKonsultasi.php"><b>X</b></a></p>
+    		<p class="konsultasi"><b>Konsultasi</b></p>
+        <p class="logout"><a id="exit" href="selesaiKonsultasi.php" onclick="finishConsultation();"><b>X</b></a></p>
         <div style="clear:both"></div>
     </div>
      
@@ -82,5 +83,10 @@
             msgBox.value = "";
         }
         return false;
+    }
+
+    function finishConsultation() {
+    	var answer = confirm("Apakah Anda yakin ingin menyelesaikan konsultasi?");
+    	return answer;
     }
 </script>
