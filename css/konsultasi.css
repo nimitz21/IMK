@@ -55,6 +55,28 @@ a {
 
 .chat {
     margin-bottom: 5px;
+    border:1px solid;
+    border-radius: 2%;
+    max-width: 80%;
+    padding: 10px;
+}
+
+#chatbox > div {
+    width: 100%;
+    display:block;
+    overflow: auto;
+}
+
+.botBubble {
+    border-color: #ACD8F0;
+    background-color: #ACD8F0;
+    float: left;
+}
+
+.myBubble {
+    border-color: #C0D890;
+    background-color: #C0D890;
+    float: right;
 }
 
 .my-chat {
@@ -63,4 +85,12 @@ a {
 
 .bot-chat {
     color: blue;
+}
+
+.konsultasi {
+    float: left;
+}
+
+#menu > p {
+    font-size: 24px;
 }
