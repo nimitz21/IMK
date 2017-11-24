@@ -1,8 +1,4 @@
 <?php
-<<<<<<< HEAD
-    include 'nav.html'
-=======
->>>>>>> b2bd9f9efd78a238e9e26c07751abeb0eca01e08
     include 'obat.php'
 ?>
 
@@ -14,7 +10,7 @@
   $obat = $_POST['obat'];
   $category = $_POST['category'];
 
-echo '<h4> Hasil pencarian untuk: '. $obat.'</h4>';
+echo '<h4 style="margin-top: 20px; margin-left: 20px"> Hasil pencarian untuk: '. $obat.'</h4>';
 if ($obat == "paracetamol") {
   echo '<div class="row" style="margin: 20px">
     <div class="card" style="width: 900px">
@@ -22,8 +18,8 @@ if ($obat == "paracetamol") {
           <h6>Paracetamol</h6>
         </div>
         <div class="card-body">
-          <p>Satuan: </p>
-          <p>Stok: </p>
+          <p>Satuan: Box</p>
+          <p>Stok: 12 Box</p>
         </div>
         </div>
         </div>'; }
