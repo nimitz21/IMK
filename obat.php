@@ -8,7 +8,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 	<script src="js/obat.js"></script>
-<div class="container" style="margin: 20px; ">
+<div class="container" style="margin-top: 20px">
 		<form class="form-inline" name="searchForm" method="POST" action="search-obat.php">
 			<h5 style="margin-right: 20px">Cari Berdasarkan</h5>
 			<div class="dropdown" style="margin-right: 20px">
