@@ -20,6 +20,8 @@
             Untuk mulai menambahkan gejala, silahkan ketikkan "tambah gejala".<br>
             Untuk mengetahui penyakit, silahkan ketikkan "lihat hasil".<br>
             Untuk berhenti dan menutup chatroom, tekan tombol "X" di pojok kanan atas<br>
+            <br>
+            <span class="option" onclick="chooseOption('tambah gejala');"> -> Tambah Gejala</span><br>
         </p>
       </div>
     </div>
@@ -42,34 +44,54 @@
 
     function replyChat(chat) {
     	var reply;
+        var replyNum = Math.floor(Math.random() * 2);
     	if (!tambahGejala) {
     		if (chat.toLowerCase() == "tambah gejala") {
 	    		tambahGejala = true;
-	    		reply = "Silahkan masukkan gejala yang Anda alami satu per satu.";
+	    		reply = "Masukkan gejala yang Anda alami satu per satu.";
 	    	} else if (chat.toLowerCase() == "lihat hasil") {
-	    		reply = "Silahkan tambah gejala terlebih dahulu.";
+                if (replyNum == 0) {
+                    reply = "Tambah gejala terlebih dahulu."
+                } else {
+                    reply = "Anda belum menambahkan gejala."
+                }
+	    		reply += "<br><br><span class=\"option\" onclick=\"chooseOption('tambah gejala')\";> -> Tambah gejala</span>";
 	    	} else {
-	    		reply = "Saya tidak mengenali perintah tersebut.<br> Untuk mulai menambahkan gejala, silahkan ketikkan \"tambah gejala\".<br> Untuk mengetahui penyakit, silahkan ketikkan \"lihat hasil\".<br>Untuk berhenti dan menutup chatroom, tekan tombol \"X\" di pojok kanan atas";
+                if (replyNum == 0) {
+                    reply = "Saya tidak mengenali perintah tersebut."
+                } else {
+                    reply = "Saya tidak mengerti maksud Anda."
+                }
+	    		reply += "<br> Untuk mulai menambahkan gejala, silahkan ketikkan \"tambah gejala\".<br> Untuk mengetahui penyakit, silahkan ketikkan \"lihat hasil\".<br>Untuk berhenti dan menutup chatroom, tekan tombol \"X\" di pojok kanan atas<br><br><span class=\"option\" onclick=\"chooseOption('tambah gejala')\";> -> Tambah gejala</span>";
 	    	}
     	} else {
     		if (chat.toLowerCase() == "lihat hasil") {
     			tambahGejala = false;
-    			gejalaCount = 0;
     			var i = 0;
     			while (i < gejala.length && (gejala[i].toLowerCase() == "perut panas" || gejala[i].toLowerCase() == "mual" || gejala[i].toLowerCase() == "kembung" || gejala[i].toLowerCase() == "sendawa" || gejala[i].toLowerCase() == "muntah")) {
     				++i;
     			}
     			console.log(i);
     			if (i == gejala.length) {
-    				reply = "Berdasarkan gejala yang diberikan, penyakit yang mungkin anda derita adalah:<br>" + "1. Maag" 
+                    if (replyNum == 0) {
+                        reply = "Berdasarkan gejala yang diberikan, penyakit yang mungkin anda derita adalah:";
+                    } else {
+                        reply = "Menurut analisis, Anda mungkin menderita penyakit sebagai berikut:";
+                    }
+    				reply += "<br>1. Maag<br><br><span class=\"option\" onclick=\"chooseOption('tambah gejala')\";> -> Tambah gejala</span>" 
     			} else {
-    				reply = "Saya tidak mengetahui penyakit dengan gejala-gejala yang anda berikan."
+                    if (replyNum == 0) {
+                        reply = "Saya tidak mengetahui penyakit dengan gejala-gejala yang anda berikan.";    
+                    } else {
+                        reply = "Saya tidak mengenali penyakit dengan gejala-gejala seperti itu"
+                    }
+                    gejalaCount = 0;
+                    gejala = [];
     			}
-    			gejala = [];
     		} else {
     			gejala[gejalaCount] = chat; 
     			++gejalaCount;
-    			reply= "Gejala " + gejalaCount + ":<br>" + chat;
+    			reply= "Gejala " + gejalaCount + ":<br>" + chat + "<br><br><span class=\"option\" onclick=\"chooseOption('lihat hasil')\";> -> Lihat hasil</span>";
     		}
     	}
     	chatBox.innerHTML += "<div><p class='chat botBubble'><b class='bot-chat'>Lisa: </b>" + reply + "<br></p></div>";
@@ -88,5 +110,11 @@
     function finishConsultation() {
     	var answer = confirm("Apakah Anda yakin ingin menyelesaikan konsultasi?");
     	return answer;
+    }
+
+    function chooseOption(option) {
+        chatBox.innerHTML += "<div><p class='chat myBubble'><b class='my-chat'>Saya: </b>" + option + "<br></p></div>";
+        replyChat(option);
+        chatbox.scrollTop = chatbox.scrollHeight;
     }
 </script>

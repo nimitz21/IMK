@@ -94,3 +94,8 @@ a {
 #menu > p {
     font-size: 24px;
 }
+
+.option {
+    color: purple;
+    font-weight: bold;
+}
