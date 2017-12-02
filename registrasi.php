@@ -2,33 +2,54 @@
     include 'nav.html'  
 ?>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+	.form-input {
+		margin-bottom: 5px;
+	}
+	.form-control{
+		height: 30px;
+	}
+	h5 {
+		margin-bottom: 1px;	
+	}
+</style>
+
 <div>
 	<h1 align="center"> Registrasi </h1>
 	<hr />
 	<h5 align="center"> Form registrasi </h5>
 	<form class="form-horizontal" name="registrasiForm" method="POST" action="finishregistrasi.php" onsubmit="return validate();">
-		<div class="form-group">
+		<div class="form-group form-input">
 			<label class="control-label col-sm-2" for="nama">Nama:</label>
 			<div class="col-sm-10">
 				<input type="text" class="form-control" id="nama" name="nama" />
 			</div>
 		</div>
-		<div class="form-group">
+		<div class="form-group form-input">
 			<label class="control-label col-sm-2" for="id">ID:</label>
 			<div class="col-sm-10">
 				<input type="text" class="form-control" id="id" name="id" />
 			</div>
 		</div>
-		<div class="form-group">
+		<div class="form-group form-input">
 			<label class="control-label col-sm-2" for="telephone">No. Telephone:</label>
 			<div class="col-sm-10">
 				<input type="text" class="form-control" id="telephone" name="telephone" />
 			</div>
 		</div>
-		<div class="form-group">
+		<div class="form-group form-input">
 			<label class="control-label col-sm-2" for="poli">Poli:</label>
 			<div class="col-sm-10">
-				<input type="text" class="form-control" id="poli" name="poli" />
+				<select class="form-control" id="poli" name="poli">
+					<option value="gigi">Gigi</option>
+					<option value="mata">Mata</option>
+					<option value="radiologi">Radiologi</option>
+					<option value="umum">Umum</option>
+				</select>
 			</div>
 		</div>
 		<div class="form-group">
