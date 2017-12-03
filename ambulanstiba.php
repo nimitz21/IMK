@@ -8,6 +8,7 @@
     unset($_SESSION['location']);
     unset($_SESSION['time']);
     unset($_SESSION['dist']);
+    unset($_SESSION['fake']);
 
 ?>
 
@@ -37,11 +38,15 @@ async defer></script>
 
 <br />
 
-<div class="row" style="width:100%; height:100%;">
-    <div class="col-lg-8" style="width:100%; height:100%;">
-        <div id="map"></div>
+<div class="row">
+    <div class="col-lg-8">
+        <form>
+            <input id="pac-input" class="controls" type="hidden" placeholder="Enter your location..">
+        </form>
+        <!--div id="map"></div-->
+        <img src="fake6.png">
     </div>
-    <div class="col-lg-4" style="width:100%; height:100%;">
+    <div class="col-lg-4">
         <div class="card">
             <h5 class="card-header">
                 Informasi Ambulans
@@ -50,31 +55,26 @@ async defer></script>
             <div class="card-block">
                 <div class="container">
                     <p class="card-text">
-                        Jarak
-                    </p>
-                    <p class="card-text">
+                        Jarak: 
                         <strong>0 km</strong>
                     </p>
                     <br />
                     <p class="card-text">
-                        Estimasi waktu:
-                    </p>
-                    <p class="card-text">
+                        Estimasi waktu: 
                         <strong>0 menit</strong>
                     </p>
                     <br />
                     <p class="card-text">
-                        Plat Kendaraan:
-                    </p>
-                    <p class="card-text">
+                        Plat Kendaraan: 
                         <strong>B2296A66</strong>
                     </p>
                     <br />
                     <p class="card-text">
-                        Kontak:
+                        Kontak: 
+                        <strong>08123456789</strong>
                     </p>
                     <p class="card-text">
-                        <strong>08123456789</strong>
+                        .
                     </p>
                 </div>
             </div>
