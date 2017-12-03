@@ -72,12 +72,12 @@ async defer></script>
     </div>
 </div>
 
-<form id="batalForm" method="POST" action="daruratbatal.php" onsubmit="">
+<form id="batalForm">
     <input name="location" type="hidden" id="location" value="<?php echo $_SESSION['location']?>" />
     <div class="row">
         <div class="col-lg-12">
             <div class="btn-group d-flex" role="group"> 
-                <a href="#" class="btn btn-secondary w-100" onclick="document.getElementById('batalForm').submit()">
+                <a href="#" class="btn btn-secondary w-100" onclick="" data-toggle="modal" data-target="#exampleModal">
                     Batalkan Ambulans
                 </a>
             </div>
@@ -87,6 +87,49 @@ async defer></script>
 
 <br />
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="card">
+            <h5 class="card-header">
+                <div class="row">
+                    <div class="col-lg-11">
+                        Pembatalan Ambulans
+                    </div>
+                    <div class="col-lg-1">
+                        <a href="tungguambulans.php">X</a>
+                    </div>
+                </div>
+            </h5>
+            
+            <div class="card-block">
+                <div class="container">
+                    <p class="card-text">
+                        Apakah Anda yakin ingin membatalkan ambulans?
+                    </p>
+                </div>
+                
+                <br /><br /><br /><br />
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="btn-group d-flex" role="group">
+                        <a href="tungguambulans.php" class="btn btn-danger w-100">Tidak</a>
+                        <a href="#" onclick="document.getElementById('batal').submit()" class="btn btn-secondary w-100">Ya, Batalkan Ambulans</a>
+                    </div>
+                </div>    
+            </div>
+
+        </div>
+    </div>
+  </div>
+</div>
+
 </div></div>
+
+<form id="batal" method="POST" action="berhasilbatal.php"></form>
+
 </body>
 </html>

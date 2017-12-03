@@ -25,9 +25,11 @@
 async defer></script>
 <script type="text/javascript" src="script/darurat.js"></script>
 <script>
-$('#myModal').on('shown.bs.modal', function () {
-    $('#myInput').trigger('focus')
-})
+    $(document).ready(function() {
+        if (getParameterByName('batal') != null && getParameterByName('batal') == 1) {
+            $('#exampleModal2').modal('show');
+        }
+     });
 </script>
 
 <form>
@@ -40,7 +42,7 @@ $('#myModal').on('shown.bs.modal', function () {
     <div class="row">
         <div class="col-lg-12">
             <div class="btn-group d-flex" role="group">
-                <a href="nav.html" class="btn btn-secondary w-100">Batal</a>
+                <a href="jadwal.php" class="btn btn-secondary w-100">Batal</a>
                 <a href="#" class="btn btn-danger w-100" onclick="" data-toggle="modal" data-target="#exampleModal">
                     Pesan Ambulans Sekarang!
                 </a>
@@ -93,6 +95,46 @@ $('#myModal').on('shown.bs.modal', function () {
   </div>
 </div>
 
+<!-- Modal 2 -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="card">
+            <h5 class="card-header">
+                <div class="row">
+                    <div class="col-lg-11">
+                        Pembatalan Ambulans
+                    </div>
+                    <div class="col-lg-1">
+                        <a onclick="$('#exampleModal2').modal('hide');" href="#">X</a>
+                    </div>
+                </div>
+            </h5>
+            
+            <div class="card-block">
+                <div class="container">
+                    <p class="card-text">
+                        Ambulans berhasil dibatalkan!
+                    </p>
+                </div>
+                
+                <br /><br /><br /><br />
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="btn-group d-flex" role="group">
+                        <a onclick="$('#exampleModal2').modal('hide');" href="#" class="btn btn-secondary w-100">Tutup</a>
+                    </div>
+                </div>    
+            </div>
+
+        </div>
+    </div>
+  </div>
+</div>
+
 </div></div>
+
 </body>
 </html>
